@@ -34,7 +34,10 @@ const leftSectionContent = [
     description: "and UI design",
     id:"ABC 453",
     comming:"Comming Soon",
-    study: "View Case Study  &#8594;"
+    study: "View Case Study  &#8594;",
+    left_color : "#172554",
+    right_color: "#1c1917"
+
   },
   {
     title: "Powered by advance",
@@ -75,6 +78,14 @@ const leftSectionContent = [
     id:"ABC 326",
     comming:"Comming Soon",
     study: "View Case Study  &#8594;"
+  },
+  {
+    title: "Solution for",
+    subtitle:"Text Headline",
+    description: "in frniture industry",
+    id:"ABC 326",
+    comming:"Comming Soon",
+    study: "View Case Study  &#8594;"
   }
 ];
 
@@ -87,7 +98,10 @@ leftSectionContent.forEach((content, index) => {
       scrub: true,
       onEnter: () => {
         document.querySelector("#title").innerText = content.title;
-        document.querySelector("#title").innerText =  path.style.strokeMiterlimit =`${240 * index}`;
+        document.getElementById('Opaque_Ring').style.strokeDasharray = `${136 * index}, 1000`;
+        document.getElementById('transring').style.backgroundColor = content.left_color
+        document.querySelector('.left-section').style.backgroundColor = content.left_color
+        document.querySelector('#section1').style.backgroundColor = content.right_color
         document.querySelector(".left-section h2").innerText = content.subtitle;
         document.querySelector(".left-section p").innerText = content.description;
         document.querySelector(".left-section h3").innerText = content.id;
